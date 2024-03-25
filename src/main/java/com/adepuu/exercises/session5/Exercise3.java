@@ -17,6 +17,26 @@ public class Exercise3 {
      * Output: true
      */
     public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5, 2};
+//        duplicateNumbers(nums);
+        System.out.println(duplicateNumbers(nums));
+
+
+    }
+
+    static boolean duplicateNumbers(int[] numList) {
+        for (int i = 0; i < numList.length; i++) {
+//            System.out.println(numList[i]);
+            for(int j = i + 1; j <numList.length; j++){
+                if(numList[i] == numList[j]){
+                    return true;
+
+                }
+            }
+        }
+
+        return false;
+
 
     }
 }
